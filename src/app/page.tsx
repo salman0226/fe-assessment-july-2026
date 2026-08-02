@@ -1,20 +1,23 @@
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
 import HeroBanner from "@/components/home/HeroBanner";
-import { genres } from "@/constants/genres";
 import GenreSection from "@/components/home/GenreSection";
+import NewArrivals from "@/components/home/NewArrivals";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-[#FFFCF3]">
+    <main className="bg-[#FFFCF3]">
       <Sidebar />
 
-      <section className="flex-1">
+      <section className="ml-[220px] min-h-screen">
         <Header />
 
         <div className="px-8 pt-8">
           <HeroBanner />
-        <GenreSection />
+
+          <GenreSection />
+
+          <NewArrivals />
         </div>
       </section>
     </main>

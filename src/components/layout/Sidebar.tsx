@@ -3,8 +3,19 @@ import { navigationItems } from "@/constants/navigation";
 
 export default function Sidebar() {
   return (
-    <aside className="ml-8 mt-8 h-[542px] w-[198px] rounded-2xl bg-[#FFFBEF] px-3 py-6">
-
+    <aside
+      className="
+        fixed
+        left-8
+        top-8
+        h-[542px]
+        w-[198px]
+        rounded-2xl
+        bg-[#FFFBEF]
+        px-3
+        py-6
+      "
+    >
       {/* Logo */}
 
       <div className="mb-8 px-3">
@@ -23,12 +34,11 @@ export default function Sidebar() {
         {navigationItems.map((item) => (
           <button
             key={item.id}
-            className={`flex h-12 w-full items-center gap-4 rounded-xl px-4 transition-all duration-200
-              ${
-                item.id === 1
-                  ? "bg-white shadow-sm"
-                  : "hover:bg-white/70"
-              }`}
+            className={`flex h-12 w-full items-center gap-4 rounded-xl px-4 transition-all duration-200 ${
+              item.id === 1
+                ? "bg-white shadow-sm"
+                : "hover:bg-white/70"
+            }`}
           >
             <Image
               src={item.icon}
