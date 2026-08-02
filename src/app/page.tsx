@@ -3,21 +3,26 @@ import Header from "@/components/layout/Header";
 import HeroBanner from "@/components/home/HeroBanner";
 import GenreSection from "@/components/home/GenreSection";
 import NewArrivals from "@/components/home/NewArrivals";
+import RecommendationSection from "@/components/home/RecommendationSection";
 
 export default function Home() {
   return (
-    <main className="bg-[#FFFCF3]">
+    <main className="flex min-h-screen bg-[#FFFCF3]">
+      {/* Fixed Sidebar */}
       <Sidebar />
 
-      <section className="ml-[220px] min-h-screen">
+      {/* Scrollable Content */}
+      <section className="ml-[230px] flex-1">
         <Header />
 
-        <div className="px-8 pt-8">
+        <div className="px-8 pt-8 pb-10">
           <HeroBanner />
 
           <GenreSection />
 
           <NewArrivals />
+
+          <RecommendationSection />
         </div>
       </section>
     </main>
