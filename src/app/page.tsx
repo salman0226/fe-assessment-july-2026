@@ -5,6 +5,7 @@ import GenreSection from "@/components/home/GenreSection";
 import NewArrivals from "@/components/home/NewArrivals";
 import RecommendationSection from "@/components/home/RecommendationSection";
 import BestSellerSection from "@/components/home/BestSellerSection";
+import AuthorSection from "@/components/home/AuthorSection";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
           <RecommendationSection />
 
           <BestSellerSection />
+
+          <AuthorSection />
         </div>
       </section>
     </main>
