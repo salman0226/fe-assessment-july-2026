@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { CrimeBook } from "@/constants/crimeFiction";
+import { NonFictionBook } from "@/constants/nonFiction";
 
-interface CrimeBookItemProps {
-  book: CrimeBook;
+interface NonFictionBookItemProps {
+  book: NonFictionBook;
 }
 
-export default function CrimeBookItem({
+export default function NonFictionBookItem({
   book,
-}: CrimeBookItemProps) {
+}: NonFictionBookItemProps) {
   return (
-    <div className="w-[190px] rounded-[12px] border border-[#EAEAE6] bg-white p-[10px]">
+    <div className="w-full max-w-[190px] rounded-[12px] border border-[#EAEAE6] bg-white p-[10px]">
       <div className="relative">
         <Image
           src={book.image}
