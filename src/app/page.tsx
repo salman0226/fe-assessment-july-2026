@@ -6,6 +6,8 @@ import NewArrivals from "@/components/home/NewArrivals";
 import RecommendationSection from "@/components/home/RecommendationSection";
 import BestSellerSection from "@/components/home/BestSellerSection";
 import AuthorSection from "@/components/home/AuthorSection";
+import CrimeFictionSection from "@/components/home/CrimeFictionSection";
+
 
 export default function Home() {
   return (
@@ -29,6 +31,9 @@ export default function Home() {
           <BestSellerSection />
 
           <AuthorSection />
+
+          <CrimeFictionSection />
+          
         </div>
       </section>
     </main>
