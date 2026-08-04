@@ -9,6 +9,7 @@ import AuthorSection from "@/components/home/AuthorSection";
 import CrimeFictionSection from "@/components/home/CrimeFictionSection";
 import NonFictionSection from "@/components/home/NonFictionSection";
 import FamousAuthorsSection from "@/components/home/FamousAuthorsSection";
+import AcademicSection from "@/components/home/AcademicSection";
 
 
 export default function Home() {
@@ -39,6 +40,8 @@ export default function Home() {
           <NonFictionSection />
 
           <FamousAuthorsSection />
+
+          <AcademicSection />
 
 
         </div>
