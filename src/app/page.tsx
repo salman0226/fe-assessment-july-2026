@@ -8,6 +8,7 @@ import BestSellerSection from "@/components/home/BestSellerSection";
 import AuthorSection from "@/components/home/AuthorSection";
 import CrimeFictionSection from "@/components/home/CrimeFictionSection";
 import NonFictionSection from "@/components/home/NonFictionSection";
+import FamousAuthorsSection from "@/components/home/FamousAuthorsSection";
 
 
 export default function Home() {
@@ -36,7 +37,9 @@ export default function Home() {
           <CrimeFictionSection />
 
           <NonFictionSection />
-          
+
+          <FamousAuthorsSection />
+
 
         </div>
       </section>
