@@ -15,44 +15,99 @@ export default function RecommendationSection() {
   const next = (current + 1) % recommendations.length;
 
   return (
-    <section className="mt-12 overflow-hidden">
-      <div className="relative w-[1034px] h-[475px]">
-
-        {/* Left Card */}
-        <div className="absolute left-0 top-0 z-10">
+    <section className="w-full overflow-hidden">
+      {/* ================= Desktop ================= */}
+      <div className="relative hidden h-[475px] xl:block">
+        {/* Main Card */}
+        <div className="absolute left-0 top-0 z-10 w-[78%]">
           <RecommendationCard
             title={recommendations[current].title}
             description={recommendations[current].description}
             bg={recommendations[current].bg}
             books={recommendations[current].books}
-            className="w-[792px]"
+            className="w-full"
           />
         </div>
 
-        {/* Right Preview */}
-        <div className="absolute left-[804px] top-0 z-0">
+        {/* Preview Card */}
+        <div className="absolute right-[-58%] top-0 z-0 w-[78%]">
           <RecommendationCard
             title={recommendations[next].title}
             description={recommendations[next].description}
             bg={recommendations[next].bg}
             books={recommendations[next].books}
-            className="w-[792px]"
+            className="w-full"
           />
         </div>
 
         {/* Arrow */}
         <button
           onClick={nextCard}
-          className="absolute left-[760px] top-1/2 z-30 flex h-[72px] w-[72px] -translate-y-1/2 items-center justify-center rounded-full border border-[#EBEBEB] bg-white shadow-lg"
+          className="
+            absolute
+            left-[74%]
+            top-1/2
+            z-30
+            flex
+            h-[72px]
+            w-[72px]
+            -translate-y-1/2
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-[#EBEBEB]
+            bg-white
+            shadow-lg
+            transition
+            hover:scale-105
+          "
         >
           <Image
             src="/icons/right-arrow.png"
             alt="Next"
-            width={33}
-            height={33}
+            width={32}
+            height={32}
           />
         </button>
+      </div>
 
+      {/* ================= Tablet & Mobile ================= */}
+      <div className="xl:hidden">
+        <RecommendationCard
+          title={recommendations[current].title}
+          description={recommendations[current].description}
+          bg={recommendations[current].bg}
+          books={recommendations[current].books}
+          className="w-full"
+        />
+
+        <div className="mt-6 flex justify-center">
+          <button
+            onClick={nextCard}
+            className="
+              flex
+              h-14
+              w-14
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-[#EBEBEB]
+              bg-white
+              shadow-md
+              transition
+              hover:scale-105
+            "
+          >
+            <Image
+              src="/icons/right-arrow.png"
+              alt="Next"
+              width={24}
+              height={24}
+            />
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -10,9 +10,10 @@ export default function BookItem({ book }: BookItemProps) {
     <div
       className="
         relative
+        mx-auto
         flex
-        h-[354px]
-        w-[191px]
+        w-full
+        max-w-[191px]
         flex-col
         rounded-[12px]
         border
@@ -32,8 +33,8 @@ export default function BookItem({ book }: BookItemProps) {
           top-[10px]
           z-10
           flex
-          h-[31px]
-          w-[31px]
+          h-8
+          w-8
           items-center
           justify-center
           rounded-full
@@ -54,51 +55,43 @@ export default function BookItem({ book }: BookItemProps) {
       </button>
 
       {/* Book Image */}
-      <Image
-        src={book.image}
-        alt={book.title}
-        width={168}
-        height={252}
-        className="
-          h-[252px]
-          w-[168px]
-          rounded-[10px]
-          object-cover
-        "
-      />
-
-      {/* Book Info */}
-      <div className="mt-[10px] flex flex-1 flex-col">
-        <h3
+      <div className="overflow-hidden rounded-[10px]">
+        <Image
+          src={book.image}
+          alt={book.title}
+          width={168}
+          height={252}
           className="
-            line-clamp-1
-            text-[15px]
-            font-semibold
-            leading-[22px]
-            text-[#1E1E1E]
+            aspect-[168/252]
+            h-auto
+            w-full
+            rounded-[10px]
+            object-cover
           "
-        >
+          sizes="
+            (max-width:640px) 45vw,
+            (max-width:768px) 30vw,
+            (max-width:1024px) 22vw,
+            168px
+          "
+        />
+      </div>
+
+      {/* Book Details */}
+      <div className="mt-3 flex flex-1 flex-col">
+        <h3 className="line-clamp-2 min-h-[44px] text-[15px] font-semibold leading-[22px] text-[#1E1E1E]">
           {book.title}
         </h3>
 
-        <p
-          className="
-            mt-[4px]
-            line-clamp-1
-            text-[14px]
-            text-[#666666]
-          "
-        >
+        <p className="mt-1 line-clamp-1 text-[14px] text-[#666666]">
           {book.author}
         </p>
 
-        {/* Read & Chat Button */}
         <button
           className="
-            mt-auto
-            h-[33px]
-            w-[165px]
-            self-center
+            mt-4
+            h-[36px]
+            w-full
             rounded-[8px]
             bg-[#1F1B4B]
             text-[14px]

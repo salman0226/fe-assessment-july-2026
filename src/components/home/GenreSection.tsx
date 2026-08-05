@@ -4,27 +4,17 @@ import { genres } from "@/constants/genres";
 export default function GenreSection() {
   return (
     <section className="mt-12 w-full">
-      {/* Section Title */}
-      <h2 className="mb-5 text-[28px] font-semibold leading-[36px] text-[#303030]">
+      {/* Title */}
+      <h2 className="mb-6 text-[26px] font-semibold text-[#303030] md:text-[30px] lg:text-[28px]">
         Dive into Different Genres
       </h2>
 
       {/* Genre Cards */}
-      <div className="flex items-center gap-[12px]">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5">
         {genres.map((genre) => (
           <div
             key={genre.id}
-            className="
-              relative
-              h-[61px]
-              w-[195px]
-              overflow-hidden
-              rounded-full
-              cursor-pointer
-              transition-transform
-              duration-300
-              hover:scale-[1.02]
-            "
+            className="group relative h-[60px] overflow-hidden rounded-full transition-transform duration-300 hover:scale-[1.03]"
           >
             <Image
               src={genre.image}

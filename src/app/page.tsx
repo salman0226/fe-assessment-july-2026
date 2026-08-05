@@ -12,19 +12,21 @@ import FamousAuthorsSection from "@/components/home/FamousAuthorsSection";
 import AcademicSection from "@/components/home/AcademicSection";
 import BusinessSection from "@/components/home/BusinessSection";
 import TechBooksSection from "@/components/home/TechBooksSection";
-
+import ClassicsSection from "@/components/home/ClassicsSection";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-[#FFFCF3]">
-      {/* Fixed Sidebar */}
+    <main className="min-h-screen bg-[#FFFCF3]">
+      {/* Sidebar */}
       <Sidebar />
 
-      {/* Scrollable Content */}
-      <section className="ml-[230px] flex-1">
+      {/* Main Content */}
+      <section className="ml-[230px]">
         <Header />
 
-        <div className="px-8 pt-8 pb-10">
+        {/* Responsive Content Container */}
+        <div className="mx-auto w-full max-w-[1120px] px-6 py-8 lg:px-8">
           <HeroBanner />
 
           <GenreSection />
@@ -47,9 +49,12 @@ export default function Home() {
 
           <BusinessSection />
 
-         <TechBooksSection/>
+          <TechBooksSection />
 
+          <ClassicsSection />
         </div>
+
+        <Footer />
       </section>
     </main>
   );

@@ -2,120 +2,72 @@ import Image from "next/image";
 
 export default function HeroBanner() {
   return (
-    <section className="mt-8">
-      <div className="relative h-[237px] w-[997px] overflow-hidden rounded-xl border border-[#E9E9E9] bg-white">
+    <section className="mt-8 w-full">
+      <div className="relative overflow-hidden rounded-2xl border border-[#E9E9E9] bg-white">
+        <div className="flex flex-col-reverse items-center justify-between gap-8 p-6 md:p-8 lg:h-[260px] lg:flex-row lg:px-10">
+          {/* Left Content */}
+          <div className="z-20 w-full max-w-[620px]">
+            <h1 className="text-[32px] font-semibold leading-tight text-[#2E294E] md:text-[42px] lg:text-[54px] lg:leading-[60px]">
+              The Echo of our Silent Pages
+            </h1>
 
-        {/* ================= LEFT CONTENT ================= */}
+            <p className="mt-5 max-w-[560px] text-[15px] leading-[170%] text-[#404040] md:text-[16px] lg:text-[18px]">
+              A global publishing technology pavilion designed to run alongside
+              major international book fairs.
+            </p>
 
-        <div className="absolute left-8 top-8 z-50">
+            <button className="mt-6 flex items-center gap-3 text-[16px] font-medium text-[#353535] transition-all hover:gap-4 lg:text-[18px]">
+              Explore More
 
-          <h1 className="w-[620px] text-[42px] font-semibold leading-none text-[#2E294E]">
-            The Echo of our Silent Pages
-          </h1>
+              <Image
+                src="/icons/hero/arrow-right.png"
+                alt="Arrow"
+                width={40}
+                height={12}
+              />
+            </button>
+          </div>
 
-          <p className="mt-5 w-[576px] text-[16px] font-normal leading-[160%] text-[#404040]">
-            A global publishing technology pavilion designed to run alongside
-            major international book fairs
-          </p>
-
-          <button className="mt-6 flex items-center gap-3 text-[16px] font-medium text-[#353535] hover:gap-4 transition-all">
-            Explore More
-
+          {/* Right Illustration */}
+          <div className="relative flex h-[260px] w-full max-w-[360px] items-center justify-center md:h-[320px] md:max-w-[420px] lg:h-full lg:w-[400px]">
+            {/* Pattern */}
             <Image
-              src="/icons/hero/arrow-right.png"
-              alt="Arrow"
-              width={38}
-              height={11}
+              src="/images/hero/hero-pattern.png"
+              alt=""
+              width={130}
+              height={160}
+              className="absolute left-2 bottom-6 opacity-40"
             />
-          </button>
+
+            {/* Outline */}
+            <Image
+              src="/images/hero/hero-outline-circle.png"
+              alt=""
+              width={305}
+              height={234}
+              className="absolute right-4 top-10 w-[220px] rotate-[115deg] md:w-[250px]"
+            />
+
+            {/* Beige Shape */}
+            <Image
+              src="/images/hero/hero-beige-circle.png"
+              alt=""
+              width={245}
+              height={188}
+              className="absolute right-10 top-20 w-[170px] rotate-[115deg] md:w-[190px]"
+            />
+
+            {/* Book */}
+            <Image
+              src="/images/hero/hero-book.png"
+              alt="Hero Book"
+              width={565}
+              height={637}
+              priority
+              className="absolute right-2 top-0 w-[220px] md:w-[250px] lg:w-[270px]"
+            />
+          </div>
         </div>
-
-        {/* ================= RIGHT HERO ILLUSTRATION ================= */}
-
-        <div className="absolute right-0 top-0 h-full w-[360px]">
-
-          {/* Bubble Pattern */}
-
-          <Image
-            src="/images/hero/hero-pattern.png"
-            alt=""
-            width={124}
-            height={158}
-            className="
-              absolute
-              left-[18px]
-              top-[120px]
-              w-[124px]
-              h-auto
-              opacity-40
-              z-10
-              pointer-events-none
-              select-none
-            "
-          />
-
-          {/* Outline Shape */}
-
-          <Image
-            src="/images/hero/hero-outline-circle.png"
-            alt=""
-            width={305}
-            height={234}
-            className="
-              absolute
-              right-[5px]
-              top-[36px]
-              w-[235px]
-              h-auto
-              rotate-[115deg]
-              z-20
-              pointer-events-none
-              select-none
-            "
-          />
-
-          {/* Beige Shape */}
-
-          <Image
-            src="/images/hero/hero-beige-circle.png"
-            alt=""
-            width={245}
-            height={188}
-            className="
-              absolute
-              right-[38px]
-              top-[78px]
-              w-[180px]
-              h-auto
-              rotate-[115deg]
-              z-30
-              pointer-events-none
-              select-none
-            "
-          />
-
-          {/* Book */}
-
-          <Image
-            src="/images/hero/hero-book.png"
-            alt="Life Of The Wild"
-            width={565}
-            height={637}
-            priority
-            className="
-              absolute
-              right-[10px]
-              top-[-18px]
-              w-[255px]
-              h-auto
-              z-40
-              pointer-events-none
-              select-none
-            "
-          />
-
-        </div>
-
       </div>
     </section>
   );

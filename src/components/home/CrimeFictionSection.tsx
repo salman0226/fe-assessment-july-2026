@@ -33,11 +33,11 @@ export default function CrimeFictionSection() {
   }
 
   return (
-    <section className="mt-20 w-full max-w-[1236px]">
+    <section className="w-full">
       {/* Heading */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div>
-          <h2 className="text-[28px] font-semibold text-[#303030]">
+          <h2 className="text-[26px] font-semibold text-[#303030] lg:text-[28px]">
             Crime Fiction
           </h2>
 
@@ -75,7 +75,16 @@ export default function CrimeFictionSection() {
       </div>
 
       {/* Books */}
-      <div className="mt-8 flex gap-[18px] overflow-hidden">
+      <div
+        className="
+          mt-8
+          grid
+          grid-cols-2
+          gap-5
+          sm:grid-cols-3
+          lg:grid-cols-6
+        "
+      >
         {visibleBooks.map((book) => (
           <CrimeBookItem
             key={book.id}

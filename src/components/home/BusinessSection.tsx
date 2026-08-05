@@ -33,11 +33,11 @@ export default function BusinessSection() {
   }
 
   return (
-    <section className="mt-20 w-full max-w-[1236px]">
+    <section className="w-full">
       {/* Heading */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div>
-          <h2 className="text-[28px] font-semibold text-[#303030]">
+          <h2 className="text-[26px] font-semibold text-[#303030] lg:text-[28px]">
             Business
           </h2>
 
@@ -50,7 +50,7 @@ export default function BusinessSection() {
         <div className="flex gap-3">
           <button
             onClick={prevBooks}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E8E8E8] bg-white"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E8E8E8] bg-white transition hover:shadow-md"
           >
             <Image
               src="/icons/arrow-left.png"
@@ -62,7 +62,7 @@ export default function BusinessSection() {
 
           <button
             onClick={nextBooks}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E8E8E8] bg-white"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E8E8E8] bg-white transition hover:shadow-md"
           >
             <Image
               src="/icons/arrow-right.png"
@@ -75,7 +75,16 @@ export default function BusinessSection() {
       </div>
 
       {/* Books */}
-      <div className="mt-8 flex gap-[18px] overflow-hidden">
+      <div
+        className="
+          mt-8
+          grid
+          grid-cols-2
+          gap-5
+          sm:grid-cols-3
+          lg:grid-cols-6
+        "
+      >
         {visibleBooks.map((book) => (
           <BusinessBookItem
             key={book.id}
