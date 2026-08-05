@@ -11,6 +11,7 @@ import NonFictionSection from "@/components/home/NonFictionSection";
 import FamousAuthorsSection from "@/components/home/FamousAuthorsSection";
 import AcademicSection from "@/components/home/AcademicSection";
 import BusinessSection from "@/components/home/BusinessSection";
+import TechBooksSection from "@/components/home/TechBooksSection";
 
 
 export default function Home() {
@@ -45,7 +46,9 @@ export default function Home() {
           <AcademicSection />
 
           <BusinessSection />
-          
+
+         <TechBooksSection/>
+
         </div>
       </section>
     </main>
