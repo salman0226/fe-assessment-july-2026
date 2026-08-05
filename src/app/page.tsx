@@ -10,6 +10,7 @@ import CrimeFictionSection from "@/components/home/CrimeFictionSection";
 import NonFictionSection from "@/components/home/NonFictionSection";
 import FamousAuthorsSection from "@/components/home/FamousAuthorsSection";
 import AcademicSection from "@/components/home/AcademicSection";
+import BusinessSection from "@/components/home/BusinessSection";
 
 
 export default function Home() {
@@ -43,7 +44,8 @@ export default function Home() {
 
           <AcademicSection />
 
-
+          <BusinessSection />
+          
         </div>
       </section>
     </main>
