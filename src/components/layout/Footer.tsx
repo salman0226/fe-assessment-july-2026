@@ -3,137 +3,104 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 bg-[#F5F9FF]">
-      {/* Main Footer */}
-      <div className="mx-auto w-full max-w-[1240px] px-5 py-14 sm:px-8 lg:px-10 xl:px-0">
+    <footer className="mt-20 bg-[#F5F9FF]">
+      <div className="mx-auto max-w-[1366px] px-6 py-16 lg:px-12">
         <div
           className="
             grid
-            grid-cols-1
             gap-12
-            sm:grid-cols-2
-            lg:grid-cols-[2fr_1fr_1fr_1fr]
-            lg:gap-10
+            md:grid-cols-2
+            xl:grid-cols-[2fr_1fr_1fr_1fr]
           "
         >
-          {/* Left */}
+          {/* Logo */}
           <div>
             <Image
               src="/icons/chai-reader-logo.png"
               alt="Chai Reader"
-              width={245}
-              height={49}
-              priority
-              className="h-auto w-[180px] sm:w-[220px] lg:w-[245px]"
+              width={220}
+              height={45}
             />
 
-            <p
-              className="
-                mt-6
-                max-w-[520px]
-                text-[15px]
-                leading-7
-                text-[#666666]
-                lg:text-[16px]
-                lg:leading-8
-              "
-            >
-              Chai Reader is an AI-powered book commerce platform designed to
-              transform how people discover and experience books—through
-              reading, chatting with books, and more. It is owned and operated
-              by Ailaysa Technologies Pvt Ltd.
+            <p className="mt-6 max-w-[500px] text-[15px] leading-8 text-[#666666]">
+              Chai Reader is an AI-powered book commerce platform designed
+              to transform how people discover and experience books through
+              reading, chatting with books and more.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-5 text-[20px] font-semibold text-[#121212] lg:text-[24px]">
+            <h3 className="mb-5 text-xl font-semibold">
               Quick Links
             </h3>
 
-            <div className="flex flex-col gap-3 text-[15px] text-[#555]">
-              <Link href="#" className="hover:text-black">
-                About
-              </Link>
-              <Link href="#" className="hover:text-black">
-                Contact
-              </Link>
-              <Link href="#" className="hover:text-black">
-                Home
-              </Link>
-              <Link href="#" className="hover:text-black">
-                FAQ
-              </Link>
-              <Link href="#" className="hover:text-black">
-                Support / Help Center
-              </Link>
+            <div className="space-y-3 text-[#666]">
+              <Link href="#">Home</Link>
+              <br />
+              <Link href="#">About</Link>
+              <br />
+              <Link href="#">Contact</Link>
+              <br />
+              <Link href="#">FAQ</Link>
+              <br />
+              <Link href="#">Support</Link>
             </div>
           </div>
 
           {/* Partners */}
           <div>
-            <h3 className="mb-5 text-[20px] font-semibold text-[#121212] lg:text-[24px]">
+            <h3 className="mb-5 text-xl font-semibold">
               For Partners
             </h3>
 
-            <div className="flex flex-col gap-3 text-[15px] text-[#555]">
-              <Link href="#" className="hover:text-black">
-                For Authors
-              </Link>
-              <Link href="#" className="hover:text-black">
-                For Publishers
-              </Link>
-              <Link href="#" className="hover:text-black">
-                Become a Partner
-              </Link>
+            <div className="space-y-3 text-[#666]">
+              <Link href="#">Authors</Link>
+              <br />
+              <Link href="#">Publishers</Link>
+              <br />
+              <Link href="#">Become Partner</Link>
             </div>
           </div>
 
           {/* Legal */}
           <div>
-            <h3 className="mb-5 text-[20px] font-semibold text-[#121212] lg:text-[24px]">
+            <h3 className="mb-5 text-xl font-semibold">
               Legal
             </h3>
 
-            <div className="flex flex-col gap-3 text-[15px] text-[#555]">
-              <Link href="#" className="hover:text-black">
-                Terms & Conditions
-              </Link>
-              <Link href="#" className="hover:text-black">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-black">
-                Cookie Policy
-              </Link>
+            <div className="space-y-3 text-[#666]">
+              <Link href="#">Privacy Policy</Link>
+              <br />
+              <Link href="#">Terms & Conditions</Link>
+              <br />
+              <Link href="#">Cookie Policy</Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer Waves */}
-      <div className="relative h-[70px] sm:h-[90px] md:h-[110px] lg:h-[148px] overflow-hidden">
+      {/* Waves */}
+      <div className="relative h-[90px] md:h-[120px] lg:h-[150px]">
         <Image
           src="/images/Rectangle-97.png"
           alt=""
           fill
-          priority
-          className="absolute inset-0 object-cover object-bottom"
+          className="object-cover"
         />
 
         <Image
           src="/images/Rectangle-96.png"
           alt=""
           fill
-          priority
-          className="absolute inset-0 object-cover object-bottom"
+          className="object-cover"
         />
 
         <Image
           src="/images/Rectangle-95.png"
           alt=""
           fill
-          priority
-          className="absolute inset-0 object-cover object-bottom"
+          className="object-cover"
         />
       </div>
     </footer>

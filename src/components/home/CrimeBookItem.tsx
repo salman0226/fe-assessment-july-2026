@@ -54,7 +54,7 @@ export default function CrimeBookItem({
         </button>
       )}
 
-      {/* Book Image */}
+      {/* Image */}
       <div className="overflow-hidden rounded-[10px]">
         <Image
           src={book.image}
@@ -68,18 +68,12 @@ export default function CrimeBookItem({
             rounded-[10px]
             object-cover
           "
-          sizes="
-            (max-width:640px) 45vw,
-            (max-width:768px) 30vw,
-            (max-width:1024px) 22vw,
-            170px
-          "
         />
       </div>
 
-      {/* Details */}
+      {/* Content */}
       <div className="mt-4 flex flex-1 flex-col">
-        <h3 className="line-clamp-2 min-h-[48px] text-[16px] font-medium text-[#303030]">
+        <h3 className="line-clamp-2 min-h-[48px] text-[16px] font-semibold text-[#303030]">
           {book.title}
         </h3>
 
@@ -97,8 +91,6 @@ export default function CrimeBookItem({
             text-[14px]
             font-medium
             text-white
-            transition
-            duration-200
             hover:bg-[#39348A]
           "
         >

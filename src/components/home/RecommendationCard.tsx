@@ -20,61 +20,32 @@ export default function RecommendationCard({
       className={`
         relative
         overflow-hidden
-        rounded-2xl
+        rounded-xl
         border
         border-[#FFE4CF]
-        bg-white
-        px-5
-        py-6
-        sm:px-7
-        sm:py-8
+        p-6
+        lg:h-[475px]
         lg:px-9
         lg:py-8
         ${className}
       `}
       style={{ backgroundColor: bg }}
     >
-      {/* Decorative Circle */}
-      <div
-        className="
-          absolute
-          -right-12
-          -top-12
-          h-[160px]
-          w-[160px]
-          rounded-full
-          bg-white/35
-          sm:h-[200px]
-          sm:w-[200px]
-          lg:h-[220px]
-          lg:w-[220px]
-        "
-      />
+      {/* Circle */}
+      <div className="absolute -right-16 -top-16 h-[220px] w-[220px] rounded-full bg-white/35" />
 
-      {/* Content */}
       <div className="relative z-10">
-        {/* Heading */}
-        <h2
-          className="
-            text-2xl
-            font-semibold
-            text-[#1E1E1E]
-            sm:text-[28px]
-            lg:text-[30px]
-          "
-        >
+        <h2 className="text-2xl font-semibold text-[#1E1E1E] lg:text-[30px]">
           {title}
         </h2>
 
-        {/* Description */}
         <p
           className="
             mt-4
             max-w-[430px]
-            text-base
+            text-[15px]
             leading-7
             text-[#555555]
-            sm:text-[17px]
             lg:text-[18px]
             lg:leading-8
           "
@@ -86,34 +57,30 @@ export default function RecommendationCard({
         <div
           className="
             mt-8
-            grid
-            grid-cols-2
+            flex
             gap-4
-            sm:grid-cols-3
+            overflow-x-auto
+            pb-2
+            lg:overflow-visible
           "
         >
           {books.map((book, index) => (
-            <div
+            <Image
               key={index}
+              src={book}
+              alt={`Book ${index + 1}`}
+              width={173}
+              height={260}
               className="
-                mx-auto
-                w-full
-                max-w-[173px]
+                h-[220px]
+                w-[145px]
+                shrink-0
+                rounded-[10px]
+                object-cover
+                lg:h-[260px]
+                lg:w-[173px]
               "
-            >
-              <Image
-                src={book}
-                alt={`Book ${index + 1}`}
-                width={173}
-                height={260}
-                className="
-                  h-auto
-                  w-full
-                  rounded-xl
-                  object-cover
-                "
-              />
-            </div>
+            />
           ))}
         </div>
       </div>

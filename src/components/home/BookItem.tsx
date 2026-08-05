@@ -25,7 +25,7 @@ export default function BookItem({ book }: BookItemProps) {
         hover:shadow-md
       "
     >
-      {/* Favourite Button */}
+      {/* Favourite */}
       <button
         className="
           absolute
@@ -68,22 +68,16 @@ export default function BookItem({ book }: BookItemProps) {
             rounded-[10px]
             object-cover
           "
-          sizes="
-            (max-width:640px) 45vw,
-            (max-width:768px) 30vw,
-            (max-width:1024px) 22vw,
-            168px
-          "
         />
       </div>
 
-      {/* Book Details */}
-      <div className="mt-3 flex flex-1 flex-col">
-        <h3 className="line-clamp-2 min-h-[44px] text-[15px] font-semibold leading-[22px] text-[#1E1E1E]">
+      {/* Info */}
+      <div className="mt-4 flex flex-1 flex-col">
+        <h3 className="line-clamp-2 min-h-[48px] text-[16px] font-semibold text-[#303030]">
           {book.title}
         </h3>
 
-        <p className="mt-1 line-clamp-1 text-[14px] text-[#666666]">
+        <p className="mt-2 text-[14px] text-[#666666]">
           {book.author}
         </p>
 
@@ -97,8 +91,6 @@ export default function BookItem({ book }: BookItemProps) {
             text-[14px]
             font-medium
             text-white
-            transition
-            duration-200
             hover:bg-[#2B2761]
           "
         >

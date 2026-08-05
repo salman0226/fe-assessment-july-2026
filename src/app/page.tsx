@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
 import HeroBanner from "@/components/home/HeroBanner";
@@ -16,17 +20,21 @@ import ClassicsSection from "@/components/home/ClassicsSection";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <main className="min-h-screen bg-[#FFFCF3]">
-      {/* Sidebar */}
-      <Sidebar />
+    <main className="min-h-screen bg-[#FFFCF3] lg:flex">
+      <Sidebar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+      />
 
-      {/* Main Content */}
-      <section className="ml-[230px]">
-        <Header />
+      <section className="w-full lg:ml-[230px]">
+        <div className="mx-auto w-full max-w-[1366px] px-4 py-6 sm:px-6 lg:px-8">
+          <Header
+            setSidebarOpen={setSidebarOpen}
+          />
 
-        {/* Responsive Content Container */}
-        <div className="mx-auto w-full max-w-[1120px] px-6 py-8 lg:px-8">
           <HeroBanner />
 
           <GenreSection />
