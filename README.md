@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 FE Assessment July 2026
 
-## Getting Started
+A fully responsive online bookstore application built with **Next.js**, **TypeScript**, and **Tailwind CSS**, implementing the provided Figma design with reusable components and a clean project structure.
 
-First, run the development server:
+## 🌐 Live Demo
+
+**Netlify:** https://fe-assessment-july.netlify.app/
+
+---
+
+## 🚀 Features
+
+- ✅ Pixel-perfect UI based on the provided Figma design
+- ✅ Fully responsive layout (Desktop, Tablet & Mobile)
+- ✅ Reusable React components
+- ✅ Optimized images using Next.js Image component
+- ✅ Responsive Sidebar
+- ✅ Responsive Header with Search Bar
+- ✅ Hero Banner
+- ✅ Genre Section
+- ✅ New Arrivals
+- ✅ Recommended Books Slider
+- ✅ Best Sellers
+- ✅ Speak with Authors
+- ✅ Crime Fiction
+- ✅ Non Fiction
+- ✅ Famous Authors
+- ✅ Academic Books
+- ✅ Business Books
+- ✅ Tech Books
+- ✅ Classics
+- ✅ Responsive Footer
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI:** React
+- **Icons:** Lucide React
+- **Image Optimization:** Next.js Image
+
+---
+
+## 📱 Responsive Design
+
+The application has been optimized for:
+
+- 📱 Mobile
+- 📲 Tablet
+- 💻 Laptop
+- 🖥 Desktop
+
+---
+
+## 📂 Project Structure
+
+```text
+src
+│
+├── app
+│   ├── author
+│   ├── book
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components
+│   ├── author
+│   ├── book
+│   ├── home
+│   ├── layout
+│   ├── review
+│   └── ui
+│
+├── constants
+│
+public
+├── icons
+└── images
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/salman0226/fe-assessment-july-2026.git
+```
+
+Navigate to the project
+
+```bash
+cd fe-assessment-july-2026
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Project Highlights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Clean and modular component architecture
+- Responsive layouts using Tailwind CSS breakpoints
+- Reusable UI components
+- Image optimization with Next.js
+- Consistent spacing and typography
+- Modern and scalable folder structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📋 Assessment Objectives
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Recreate the provided Figma design
+- Build reusable React components
+- Follow responsive design principles
+- Write clean and maintainable code
+- Deliver a production-ready frontend implementation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👨‍💻 Author
+
+**Salman P**
+
+Frontend Developer
+
+- GitHub: https://github.com/salman0226
+- Live Demo: https://fe-assessment-july.netlify.app/
+
+---
+
+## 📄 License
+
+This project was created as part of the **Frontend Engineer Technical Assessment** and is intended for evaluation purposes.
